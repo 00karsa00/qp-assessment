@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "08b50e0e-6ee9-489c-bebb-24691a2f60bd",
+		"name": "Interview Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10233839",
+		"_collection_link": "https://www.postman.com/bold-station-630909/workspace/karthick/collection/10233839-08b50e0e-6ee9-489c-bebb-24691a2f60bd?action=share&source=collection_link&creator=10233839"
+	},
+	"item": [
+		{
+			"name": "adminLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\" : \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groceryList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJhZG1pbiIsInR5cGUiOiJhZG1pbiIsImlhdCI6MTcxMDM1NTkxOSwiZXhwIjoxNzEwMzU5NTE5fQ.jZqdDZmkxP1-oDe_gCu6tQ35OJuOarUM_yYyINHTACA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": {\r\n        \"name\": \"\",\r\n        \"code\":\"\"\r\n    },\r\n    \"filterBy\": {\r\n        \"type\": [\"veg\"],\r\n        \"status\": [\"available\"],\r\n        \"price\": {\r\n            \"start\": 200,\r\n            \"end\": 20\r\n        },\r\n        \"qtyType\": [\"kg\"]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/groceryList",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"groceryList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groceryUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJhZG1pbiIsInR5cGUiOiJhZG1pbiIsImlhdCI6MTcxMDM1NTkxOSwiZXhwIjoxNzEwMzU5NTE5fQ.jZqdDZmkxP1-oDe_gCu6tQ35OJuOarUM_yYyINHTACA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"price\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/grocery/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"grocery",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groceryAdd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"SC11022\",\n    \"name\": \"tomoto\",\n    \"price\": \"30.5\",\n    \"qtyType\": \"kg\",\n    \"type\": \"veg\",\n    \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/grocery/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"grocery",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic NWEzOWE2ZTBhZTMwNDc0YjhhOTZkOGE3MGM4NzgxYTM6NzAyY2U5MjU3OTAxNGNmZTk5OTI0ZWJmYTcyMTgzZTc=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"karthick111\",\n    \"email\": \"karthi1@gmail11.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic NWEzOWE2ZTBhZTMwNDc0YjhhOTZkOGE3MGM4NzgxYTM6NzAyY2U5MjU3OTAxNGNmZTk5OTI0ZWJmYTcyMTgzZTc=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"karthick111\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user groceryList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywidXNlcm5hbWUiOiJrYXJ0aGljazExMSIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzEwMzU3MDg4LCJleHAiOjE3MTAzNjA2ODh9.ch7OY7Ild2XpHc6U-VglQcfJKJt42kWif8K_8W-Ai5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"karthick111\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/groceryList",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"groceryList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user bookItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywidXNlcm5hbWUiOiJrYXJ0aGljazExMSIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzEwMzU3MDg4LCJleHAiOjE3MTAzNjA2ODh9.ch7OY7Ild2XpHc6U-VglQcfJKJt42kWif8K_8W-Ai5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groceryItem\" : [\n        {\n            \"grocery_id\": \"1\",\n            \"qty\": 1\n        },\n        {\n            \"grocery_id\": \"2\",\n            \"qty\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/bookItem",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"bookItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user bookedItem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywidXNlcm5hbWUiOiJrYXJ0aGljazExMSIsInR5cGUiOiJ1c2VyIiwiaWF0IjoxNzEwMzU3MDg4LCJleHAiOjE3MTAzNjA2ODh9.ch7OY7Ild2XpHc6U-VglQcfJKJt42kWif8K_8W-Ai5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/bookedItem",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"bookedItem"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
